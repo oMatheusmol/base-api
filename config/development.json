@@ -1,0 +1,35 @@
+{
+    "ENV": "development",
+    "HOST": "localhost",
+    "SERVER": {
+        "PORT": 7000
+    },
+    "TEST": {
+        "HOST": "http://localhost",
+        "PORT": 7001
+    },
+    "DB": {
+        "MSSQL": {
+            "HOST": "infosistemas.no-ip.info",
+            "PORT": 15582,
+            "USER": "suporte",
+            "PASSWORD": "@c3$$0#$up0rt3#2o21",
+            "DATABASE": "Locavia",
+            "CONNECTION_TIMEOUT": 20000,
+            "REQUEST_TIMEOUT": 30000,
+            "POOL": {
+                "MAX": 5,
+                "MIN": 1
+            },
+            "OPTIONS": {
+                "ENCRYPT": false
+            }
+        }
+    },
+    "API_CONFIG":{
+        "API_MARVEL": {
+            "BASE_URL": "",
+            "API_KEY": ""
+        }
+    }
+}
