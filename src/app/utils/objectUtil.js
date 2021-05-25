@@ -1,8 +1,5 @@
 'use strict';
-/**
- * Object Util
- * @author Filipe Campos
- */
+
 module.exports = class ObjectUtils {
 
     /**

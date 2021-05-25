@@ -9,7 +9,6 @@ let memCache = new cache.Cache();
 
 /**
  * Request service HTTP route
- * @author Filipe Campos
  */
 module.exports = class BaseController {
 

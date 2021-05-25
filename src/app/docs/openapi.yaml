@@ -38,7 +38,7 @@ tags:
     description: "Dados de Usuários"
 
 paths:
- # Auth #
+  # Auth #
   /auth/access-token:
     post:
       tags:
@@ -107,44 +107,9 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorResponse"
+
+  # Usuarios Routes #
   
-  # Usuarios Routes # 
-  /usuarios/{id}:
-    get:
-      tags:
-        - Usuarios
-      summary: Recupera dados do Usuario
-      operationId: getUsuario
-      security:
-        - ApiKeyAuth: []
-      parameters:
-        - in: path
-          name: id
-          required: true
-          schema:
-            type: integer
-            format: int64   
-      responses:
-        200:
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/usuarioResponse"
-        401:
-          description: UNAUTHORIZED
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorResponse"
-        500:
-          description: INTERNAL_SERVER_ERROR
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorResponse"
   /consulta:
     post:
       tags:
@@ -172,68 +137,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/errorResponse"
-  
-  # Marvel Routes # 
-  /marvel/characteres/{id}:
-    get:
-      tags:
-        - Marvel
-      summary: Recupera dados de um personagem da marvel pelo id
-      operationId: getCharacteres
-      security:
-        - ApiKeyAuth: []
-      parameters:
-        - in: path
-          name: id
-          required: true
-          schema:
-            type: integer
-            format: int64   
-      responses:
-        200:
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/apiResponse" 
-        500:
-          description: INTERNAL_SERVER_ERROR
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorResponse"
-  /marvel/characteres:
-    get:
-      tags:
-        - Marvel
-      summary: Recupera dados de personagens da marvel
-      operationId: getCharacterById
-      security:
-        - ApiKeyAuth: []
-      parameters:
-        - in: query
-          name: name
-          required: true
-          allowReserved: true
-          schema:
-            type: string
-      responses:
-        200:
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/apiResponse" 
-        500:
-          description: INTERNAL_SERVER_ERROR
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/errorResponse"
 
 components:
   securitySchemes:
@@ -253,7 +156,7 @@ components:
             message:
               type: string
             error:
-              type: string  
+              type: string
     apiResponse:
       type: object
       properties:
@@ -265,4 +168,4 @@ components:
         usuarioId:
           type: number
         nomeUsuario:
-          type: string 
+          type: string

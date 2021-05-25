@@ -1,9 +1,6 @@
 'use strict';
 
-/**
- * Utilitário de arquivos
- * @author Filipe Campos
- */
+
 const fs = require('fs');
 const ErroException = require('../../api/exceptions/http.error.exception');
 

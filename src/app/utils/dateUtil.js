@@ -1,10 +1,7 @@
 'use strict';
 const _ = require('lodash');
 const moment = require('moment');
-/**
- * Utilitário de datas
- * @author Filipe Campos
- */
+
 module.exports = {
     getTimestamp: (date) => {
         try {

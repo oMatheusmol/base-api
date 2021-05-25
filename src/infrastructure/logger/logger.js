@@ -1,4 +1,7 @@
 'use strict';
+/*
+    *Configurações da rota, token entre outros da api.
+*/
 const fs = require('fs');
 const path = require('path');
 const config = require('config');

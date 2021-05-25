@@ -1,7 +1,9 @@
 const config = require('config');
 const os = require('os');
 const localHost = os.hostname();
-
+/**
+ * Configuração de conexão do banco de dados SQL Server
+*/
 const cfg = config.DB.MSSQL;
 
 const MSSQL_CONFIG = {
@@ -23,9 +25,6 @@ const MSSQL_CONFIG = {
         }
     }
 }
-/**
- * Configuração de conexão do banco de dados SQL Server
- * 
- * @author Filipe Campos
- */
+
+
  module.exports = MSSQL_CONFIG;

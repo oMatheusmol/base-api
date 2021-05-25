@@ -1,13 +1,7 @@
 'use strict';
 const HttpStatusCode = require('../helpers/httpStatusCode');
 const ObjectUtils = require('../utils/objectUtil');
-/**
- * Exceção para classificação interna de erros
- * 
- * Ex: SQL inválido ou objetos
- * 
- * @author Filipe Campos
- */
+
 module.exports = class Exception extends Error {
     constructor(err, status) {
         super(err || "INTERNAL_SERVER_ERROR");

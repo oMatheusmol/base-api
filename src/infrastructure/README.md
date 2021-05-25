@@ -1,1 +1,0 @@
-# Configurações da rota, token entre outros da api.

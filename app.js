@@ -21,5 +21,6 @@ async function start(conn) {
     server.listen(port, () => {
         console.log(`API running on Port ${port} | Enviroment: ${enviroment} | Database: ${db}`);
     });
+    module.exports = { server };
 
 }

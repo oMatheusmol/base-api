@@ -10,6 +10,7 @@ class consultaController extends BaseController {
   async create(req, res) {
     try {
       const result = await repository.create(req.body);
+      console.log(result);
       super.sendSuccess(res, result);
     } catch (err) {
       super.sendError(res, err);

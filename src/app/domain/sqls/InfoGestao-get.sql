@@ -2,7 +2,6 @@ SELECT
       CNPJ,
       RazaoSocialLocadora,
       NomeCondutor,
-      DataHora,
       CodigoUsuario,
       TipoConsulta,
       Valor,

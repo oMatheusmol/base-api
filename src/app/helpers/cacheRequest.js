@@ -1,8 +1,7 @@
 /**
  * Objeto para salvar requisição em memória (cache)
- * 
- * @author Filipe Campos
  */
+
 module.exports = class CacheRequest {
 
     constructor(duration = 3600, key) {
